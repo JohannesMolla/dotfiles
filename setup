@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Purpose: Setup script
+# Author: Kuthathwe
+
+# Change directory to home and make .old-dotfiles dir
+cd $HOME && mkdir -p .old_dotfiles
+
+# Lists of old files
+old_files=(.vim .vimrc .tmux.conf .bashrc .inputrc)
+# Old dotfiles directory
+old_dotfiles='.old_dotfiles'
+
+# For loop to move old files to .old_dotfiles
+for of in "${old_files[@]}";do
+	mv $of $old_dotfiles &> /dev/null
+done
+
+# Back to dotfiles directory
+cd - > /dev/null
+# Copy each file to $HOME
+cp -rf .vim .vimrc .tmux.conf .bashrc .inputrc $HOME/
+
