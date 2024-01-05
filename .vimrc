@@ -58,8 +58,10 @@ set laststatus=2
 let mapleader = " "
 " Mapping  jj to out from insert mode 
 inoremap jj <ESC>
-" Saving file with Ctrl+s
+" Saving file with Ctrl+s in insert mode
 inoremap <C-s> <ESC>:w<CR>
+" Saving file with Ctrl+s in normal mode
+noremap <C-s> <ESC>:w<CR>
 " Close opened tab
 noremap <leader>b :bd<CR>
 " Sourcing file with so
