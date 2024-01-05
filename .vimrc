@@ -1,6 +1,7 @@
 " Plugin ==============
 call plug#begin()
 	Plug 'itchyny/lightline.vim'
+	Plug 'girishji/vimcomplete'
 call plug#end()
 
 " Number line ==============
