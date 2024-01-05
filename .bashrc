@@ -28,11 +28,14 @@ alias l="ls --color=auto"
 alias la="ls -a --color=auto"
 alias ll="ls -l --color=auto"
 alias lh="ls -lh --color=auto"
-alias relo="source ~/.bashrc"
 alias rf="rm -rf"
 alias rm="rm -i"
+alias tar="tar xvzf"
 alias tree="tree -C"
+alias relo="source ~/.bashrc"
 alias :q="exit"
 alias grep="grep --color=auto"
 alias vimnorc="vim -u NONE"
 
+# Personal bin files
+PATH=$PATH:/opt/hugo/
