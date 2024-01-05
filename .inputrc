@@ -1,0 +1,24 @@
+# Tab autocomplete case insensitive
+set completion-ignore-case
+
+# List all matches in multiple possible completions
+set show-all-if-ambiguous on
+
+# Add a trailing slash when autocompleting 
+set mark-symlinked-directories on
+
+# Do not autocomplete hidden files unless the patter begins .
+set match-hidden-files off
+
+# Show all autocomplete result at once
+set page-completions off
+
+# If there are more than 200 completion ask to show them all
+set completion-query-items 200
+
+# Show extra file information when completing
+set visible-stats on
+
+# Be more intelligent when autocompleting by also looking at the
+# text after
+set skip-completed-text on
