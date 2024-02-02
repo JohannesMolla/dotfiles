@@ -36,6 +36,8 @@ alias relo="source ~/.bashrc"
 alias :q="exit"
 alias grep="grep --color=auto"
 alias vimnorc="vim -u NONE"
+alias py="python3"
 
-# Personal bin files
-PATH=$PATH:/opt/hugo/
+# Npm bin
+export PATH=~/.npm-global/bin:$PATH
+

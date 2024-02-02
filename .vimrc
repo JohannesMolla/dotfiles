@@ -1,7 +1,7 @@
 " Plugin ==============
 call plug#begin()
+	Plug 'jiangmiao/auto-pairs'
 	Plug 'itchyny/lightline.vim'
-	Plug 'girishji/vimcomplete'
 call plug#end()
 
 " Number line ==============
@@ -31,7 +31,7 @@ set t_Co=256
 " Using 256 colors
 set termguicolors
 " Using slate color
-colorscheme slate
+colorscheme habamax
 " Setting dark mode
 set background=dark
 " Enabling syntax highlighting
@@ -88,3 +88,21 @@ noremap <C-l> <C-w>l
 vnoremap <C-Up>   :m '<-2<CR>gv=gv
 vnoremap <C-Down> :m '>+1<CR>gv=gv
 
+" Lsp config
+" Python language server
+packadd lsp
+call LspAddServer([#{name: 'pyright',
+                 \   filetype: 'python',
+                 \   path: '/home/yohannes/.npm-global/bin/pyright-langserver',
+								 \	 args: ['--stdio'],
+                 \   workspaceConfig: #{
+                 \     python: #{
+                 \       pythonPath: '/usr/bin/python3.10'
+                 \   }}
+                 \ }])
+" C/C++ language server
+call LspAddServer([#{name: 'clangd',
+                 \   filetype: ['c', 'cpp', 'cc'],
+                 \   path: '/usr/bin/clangd',
+								 \   args: ['--background-index', '--clang-tidy']
+                 \ }])
